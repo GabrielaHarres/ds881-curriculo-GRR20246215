@@ -1,0 +1,9 @@
+services:
+  curriculo:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    command: http-server -p 8080
+    
