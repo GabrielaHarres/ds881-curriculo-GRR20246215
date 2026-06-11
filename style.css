@@ -1,22 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 40px;
+font-family: 'Poppins', sans-serif;
+background: #0f172a;
+color: #e2e8f0;
+min-height: 100vh;
+padding: 40px 20px;
 }
 
 .container {
-    background: white;
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
+max-width: 1300px;
+margin: auto;
+display: grid;
+grid-template-columns: 320px 1fr;
+background: #111827;
+border-radius: 25px;
+overflow: hidden;
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
-h1 {
-    color: #2c3e50;
+.sidebar {
+background: linear-gradient(180deg, #7c3aed, #4f46e5);
+color: white;
+padding: 40px 30px;
+}
+
+.perfil {
+text-align: center;
+}
+
+.foto {
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255,255,255,0.25);
+    box-shadow: 0 0 25px rgba(255,255,255,0.15);
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.perfil h1 {
+margin-top: 20px;
+font-size: 1.8rem;
+}
+
+.perfil p {
+margin-top: 10px;
+opacity: .9;
+}
+
+.contato {
+margin-top: 35px;
+}
+
+.contato h3 {
+margin-bottom: 15px;
+font-size: 1.1rem;
+}
+
+.contato p {
+margin-bottom: 12px;
+line-height: 1.6;
+}
+
+.contato i {
+width: 20px;
+margin-right: 8px;
+}
+
+.content {
+padding: 50px;
+}
+
+section {
+margin-bottom: 40px;
 }
 
 h2 {
-    color: #34495e;
+color: #c084fc;
+margin-bottom: 20px;
+font-size: 1.8rem;
+}
+
+section p {
+color: #cbd5e1;
+line-height: 1.9;
+}
+
+.card {
+background: #1e293b;
+border-left: 5px solid #8b5cf6;
+padding: 20px;
+border-radius: 12px;
+margin-bottom: 15px;
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-4px);
+}
+
+.card h3 {
+color: #f3e8ff;
+margin-bottom: 10px;
+}
+
+.card p {
+color: #cbd5e1;
+}
+
+.skills {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+}
+
+.skills span {
+background: #8b5cf6;
+color: white;
+padding: 10px 18px;
+border-radius: 30px;
+font-size: .9rem;
+transition: .3s;
+}
+
+.skills span:hover {
+background: #a855f7;
+transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+
+.container {
+    grid-template-columns: 1fr;
+}
+
+.content {
+    padding: 30px;
+}
+
+.sidebar {
+    text-align: center;
+}
+
 }
