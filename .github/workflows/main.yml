@@ -12,26 +12,39 @@ permissions:
 
 jobs:
 
-  build:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Verifica arquivos
+      - name: Verifica arquivos obrigatórios
         run: |
           test -f index.html
           test -f style.css
 
+  build:
+    needs: lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Simula build do site estático
+        run: |
+          mkdir dist
+          cp index.html dist/
+          cp style.css dist/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: dist
 
   deploy:
     needs: build
-
     runs-on: ubuntu-latest
 
     environment:
