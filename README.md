@@ -68,3 +68,130 @@ A entrega deve ser realizada através do formulário disponibilizado pelo profes
 ---
 
 > **Atenção:** Não esqueça de anexar no final deste README ou na documentação do projeto um print comprovando que a regra de **Branch Protection** da `main` foi configurada no GitHub.
+
+# Currículo Online DS881
+
+Projeto desenvolvido para a disciplina **DS881**, com o objetivo de disponibilizar um currículo online utilizando Docker, GitHub Actions e GitHub Pages.
+
+## Link do Projeto
+
+🔗 https://gabrielaharres.github.io/ds881-curriculo-GRR20246215/
+
+---
+
+## Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- Docker
+- Docker Compose
+- GitHub Actions
+- GitHub Pages
+- Git e GitHub
+
+---
+
+## Execução Local com Docker
+
+### Construir a imagem
+
+```bash
+docker compose build
+```
+
+### Iniciar o ambiente
+
+```bash
+docker compose up
+```
+
+O site ficará disponível em:
+
+```text
+http://localhost:8080
+```
+
+---
+
+## Estrutura do Projeto
+
+```text
+.
+├── .github/
+│   └── workflows/
+│       └── main.yml
+├── Dockerfile
+├── docker-compose.yml
+├── index.html
+├── style.css
+├── FOTO_GABI.jpeg
+└── README.md
+```
+
+---
+
+## Pipeline CI/CD
+
+O projeto utiliza GitHub Actions para automatizar o processo de integração e entrega contínua.
+
+### Etapas executadas
+
+#### Lint
+
+Verifica a existência dos arquivos obrigatórios:
+
+- index.html
+- style.css
+- FOTO_GABI.jpeg
+
+#### Build
+
+Realiza a preparação dos arquivos para publicação.
+
+#### Deploy
+
+Publica automaticamente o site no GitHub Pages após alterações aprovadas na branch principal.
+
+---
+
+## Workflow de Git
+
+Durante o desenvolvimento foi utilizado um fluxo baseado em Pull Requests:
+
+1. Criação da branch `feat/curriculo`
+2. Desenvolvimento das funcionalidades
+3. Commits seguindo o padrão Conventional Commits
+4. Abertura de Pull Request
+5. Merge para a branch `main`
+
+Exemplos de commits realizados:
+
+```text
+feat: cria currículo inicial
+feat: adiciona configuracao docker
+ci: adiciona pipeline github actions
+style: melhora layout e adiciona foto de perfil
+fix: corrige workflow
+```
+
+---
+
+## Proteção da Branch Main
+
+A branch `main` foi configurada para utilização através de Pull Requests, seguindo as boas práticas de governança de código exigidas pela atividade.
+
+### Evidência
+
+Inserir abaixo um print da configuração da branch protection:
+
+![Branch Protection](branch-protection.jpeg)
+![Branch Protection] (main-protegida.jpeg)
+
+```
+
+---
+
+## Autora
+
+**Gabriela Harres**
+
